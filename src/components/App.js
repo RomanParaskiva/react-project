@@ -2,14 +2,29 @@ import React from 'react';
 import '../css/App.css';
 import Footer from './Footer/Footer';
 import Header from "./Header/Header";
-import MainContent from "./MainContent/MainContent";
 import MenuBtn from "./MainContent/MenuBtn";
+import {BrowserRouter as Router, Route, Switch, Redirect} from 'react-router-dom';
+import MainContent from "./MainContent/MainContent";
+import {ServicesContent} from "./ServicesContent/ServicesContent";
+import {ContactsContent} from "./ContactsContent/ContactsContent";
+
+// const MainContent = lazy(() => import('./MainContent/MainContent'));
+// const ServicesContent = lazy(() => import('./ServicesContent/ServicesContent'));
+// const ContactsContent = lazy(() => import('./ContactsContent/ContactsContent'));
+
 
 
 const App = () => (
     <div className="App">
       <Header/>
-      <MainContent />
+        <Router>
+            <Switch>
+                <Route exact path="/" component={MainContent} />
+                <Route path="/services" component={ServicesContent}/>
+                <Route path="/contacts" component={ContactsContent}/>
+                <Redirect to='/'/>
+            </Switch>
+        </Router>
       <Footer />
       <MenuBtn/>
     </div>

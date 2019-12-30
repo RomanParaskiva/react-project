@@ -1,19 +1,19 @@
 const linkData = [
     {
         id: 1,
-        href: "#main",
+        href: "/",
         linkClass: "nav_link",
         text: "главная"
     },
     {
         id: 2,
-        href: "#main",
+        href: "/services",
         linkClass: "nav_link",
         text: "услуги"
     },
     {
         id: 3,
-        href: "#main",
+        href: "/contacts",
         linkClass: "nav_link",
         text: "контакты"
     }

@@ -4,7 +4,6 @@ import React from 'react';
 function FirstScreen() {
     return (
     <section id="main">
-        <div id="particle-canvas"></div>
 
         <div className="main_wrapper">
             <div className="title_blc">

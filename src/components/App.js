@@ -2,31 +2,30 @@ import React from 'react';
 import '../css/App.css';
 import Footer from './Footer/Footer';
 import Header from "./Header/Header";
-import MenuBtn from "./MainContent/MenuBtn";
 import {BrowserRouter as Router, Route, Switch, Redirect} from 'react-router-dom';
 import MainContent from "./MainContent/MainContent";
 import {ServicesContent} from "./ServicesContent/ServicesContent";
 import {ContactsContent} from "./ContactsContent/ContactsContent";
-
-// const MainContent = lazy(() => import('./MainContent/MainContent'));
-// const ServicesContent = lazy(() => import('./ServicesContent/ServicesContent'));
-// const ContactsContent = lazy(() => import('./ContactsContent/ContactsContent'));
+import ServiceMenu from "./ServicesContent/ServiceMenu";
 
 
 
 const App = () => (
     <div className="App">
+        <ServiceMenu/>
       <Header/>
-        <Router>
-            <Switch>
-                <Route exact path="/" component={MainContent} />
-                <Route path="/services" component={ServicesContent}/>
-                <Route path="/contacts" component={ContactsContent}/>
-                <Redirect to='/'/>
-            </Switch>
-        </Router>
+        <div id="app_content">
+            <Router>
+                <Switch>
+                    <Route exact path="/" component={MainContent} />
+                    <Route path="/services" component={ServicesContent}/>
+                    <Route path="/contacts" component={ContactsContent}/>
+                    <Redirect to='/'/>
+                </Switch>
+            </Router>
+        </div>
       <Footer />
-      <MenuBtn/>
     </div>
-);
+)
+
 export default App;

@@ -8,10 +8,6 @@ import MainContent from "./MainContent/MainContent";
 import {ServicesContent} from "./ServicesContent/ServicesContent";
 import {ContactsContent} from "./ContactsContent/ContactsContent";
 
-// const MainContent = lazy(() => import('./MainContent/MainContent'));
-// const ServicesContent = lazy(() => import('./ServicesContent/ServicesContent'));
-// const ContactsContent = lazy(() => import('./ContactsContent/ContactsContent'));
-
 
 
 const App = () => (

@@ -3,21 +3,48 @@ import ServicesLinkData from './ServicesLinkData';
 import PhaseCard from "./PhaseCard";
 
 
+class LandingPage extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            pageId: '',
+            phasesCard: '',
+            title: '',
+        }
+    }
 
-function LandingPage() {
-    const phasesCard = ServicesLinkData[0].phases.map(phase => <PhaseCard key={phase.id} {...phase} />);
+    componentDidMount() {
+        for (let i = 0; i < ServicesLinkData.length; i++) {
 
-    const title = ServicesLinkData[0].title;
-    return (
-        <div id="phases">
-            <div>
-                <h2>{title}</h2>
+            if (!ServicesLinkData[i].name === this.props.pageId) {
+                return 'dffd';
+            } else {
+                this.setState({
+                    phasesCard: ServicesLinkData[i].phases.map(phase => <PhaseCard key={phase.id} {...phase} />)
+                });
+
+                this.setState({title: ServicesLinkData[i].title});
+            }
+        }
+    }
+
+
+    render() {
+
+
+        return (
+            <div id="phases">
+                <div>
+                    <h2>{this.state.title}</h2>
+                </div>
+                <div className="card_wrapper">
+                    {this.state.phasesCard}
+                </div>
             </div>
-            <div className="card_wrapper">
-                {phasesCard}
-            </div>
-        </div>
-    );
+        );
+    }
+
+
 }
 
 export default LandingPage;

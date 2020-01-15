@@ -6,13 +6,13 @@ import {BrowserRouter as Router, Route, Switch, Redirect} from 'react-router-dom
 import MainContent from "./MainContent/MainContent";
 import {ServicesContent} from "./ServicesContent/ServicesContent";
 import {ContactsContent} from "./ContactsContent/ContactsContent";
-import ServiceMenu from "./ServicesContent/ServiceMenu";
+import Menu from "./Menu/Menu";
 
 
 
 const App = () => (
     <div className="App">
-        <ServiceMenu/>
+        <Menu/>
       <Header/>
         <div id="app_content">
             <Router>

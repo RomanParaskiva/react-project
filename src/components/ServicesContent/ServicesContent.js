@@ -9,8 +9,7 @@ export function ServicesContent() {
             <div id="servicesContent">
                 <Router>
                     <Switch>
-                        <Route exact path='/services/LandingPage' component={LandingPage}/>
-                        <Route exact path='/services/Shop' component={Shop}/>
+                        <Route exact path='/services/:pageId' component={LandingPage}/>
                         <Redirect to='/services/LandingPage'/>
                     </Switch>
                 </Router>

@@ -1,5 +1,5 @@
 import React from 'react';
-import MenuOpenerDesctopBtn from "./MenuOpenerDesc";
+import MenuOpenerDesctopBtn from "../Menu/MenuOpenerDesc";
 
 
 

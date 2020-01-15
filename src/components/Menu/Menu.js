@@ -1,13 +1,13 @@
 import React from 'react';
-import ServicesLinkData from "./ServicesLinkData";
-import MenuLink from "../Header/MenuLink";
-import MenuLinks from "../Header/MenuLinks";
-import {IconBlock} from "../Header/IconBlock";
+import ServicesLinkData from "../ServicesContent/ServicesLinkData";
+import MenuLink from "./MenuLink";
+import MenuLinks from "./MenuLinks";
+import {IconBlock} from "./IconBlock";
 
-export default function ServiceMenu() {
+export default function Menu() {
     const servicesLinks = ServicesLinkData.map(link => <MenuLink key={link.id} {...link}/>);
     return (
-        <div id="menu">
+        <div id="menu" style={{left: '-310px'}}>
             <div className="menu_blc">
                 <MenuLinks/>
 

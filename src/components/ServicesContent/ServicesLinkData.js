@@ -1,3 +1,4 @@
+
 const ServicesLinkData = [
     {
         id : 1,
@@ -69,9 +70,10 @@ const ServicesLinkData = [
     {
         id: 2,
         href: '/services/shop',
-        name: 'Shop',
+        name: 'shop',
         linkClass: "nav_link",
         text: 'Интернет магазин',
+        title: 'Интернет магазин',
         phases: [
             {
                 id: 1,
@@ -100,5 +102,6 @@ const ServicesLinkData = [
             }
         ],
     }
+
 ];
 export default ServicesLinkData;

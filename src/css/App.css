@@ -450,6 +450,12 @@ a svg:hover {
     flex-direction: column;
 }
 
+#third .info_btn_block {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 #third .info_block button{
     width: 10vw;
     height: 10vw;

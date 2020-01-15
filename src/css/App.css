@@ -521,6 +521,7 @@ footer > img {
 #service_section #servicesContent .card_wrapper {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 #service_section #servicesContent .phases_cart {

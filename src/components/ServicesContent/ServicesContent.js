@@ -1,7 +1,6 @@
 import React from 'react';
 import {BrowserRouter as Router,Switch,Route,Redirect } from "react-router-dom";
-import LandingPage from "./LandingPage";
-import Shop from "./Shop";
+import ServicePage from "./ServicePage";
 
 export function ServicesContent() {
     return(
@@ -9,7 +8,7 @@ export function ServicesContent() {
             <div id="servicesContent">
                 <Router>
                     <Switch>
-                        <Route exact path='/services/:pageId' component={LandingPage}/>
+                        <Route exact path='/services/:pageId' component={ServicePage}/>
                         <Redirect to='/services/LandingPage'/>
                     </Switch>
                 </Router>

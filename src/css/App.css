@@ -541,7 +541,11 @@ footer > img {
 }
 
 #service_section #phases .phases_cart h3 {
-  color: rgba(174, 174, 174, 0.56);
+  color: rgba(19, 222, 53, 0.56);
+}
+
+#service_section h2 {
+  margin: 30px 0;
 }
 
 #service_section #phases .phases_cart p {
